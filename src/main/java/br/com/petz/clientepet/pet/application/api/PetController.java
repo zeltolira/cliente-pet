@@ -35,8 +35,9 @@ public class PetController implements PetAPI {
 	public PetClienteDetalhadoResponse getPetClienteAtravesId(UUID idCliente, UUID idPet) {
 		log.info("[inicia] PetController - getPetClienteAtravesId");
 		log.info("[idCliente] {} - [idPet] {} - idCliente, idPet");
+		PetClienteDetalhadoResponse pet = petService.buscaPetClienteAtravesId(idCliente, idPet);
 		log.info("[finaliza] PetController - getPetClienteAtravesId");
-		return null;
+		return pet;
 	}
 
 }
